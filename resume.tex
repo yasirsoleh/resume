@@ -1,0 +1,105 @@
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+\setmainfont{Liberation Sans}
+\setsansfont{Liberation Sans}
+\setmonofont{Liberation Mono}
+
+% Page layout
+\usepackage[margin=0.6in]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\pagestyle{empty}
+
+% Spacing
+\usepackage{enumitem}
+\setlist{nosep,left=0pt,label=--}
+
+% Links
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black
+}
+
+% Section formatting
+\usepackage{titlesec}
+\titleformat{\section}{\normalsize\bfseries\uppercase}{}{0pt}{}
+\titlespacing{\section}{0pt}{8pt}{1pt}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+{\Large\textbf{Mohammad Alif Yasir bin Soleh}}\\[2pt]
+{\footnotesize Petaling Jaya, Selangor \textbar{} yasirsoleh@gmail.com \textbar{} +60 11-2550 9087  \linebreak
+\href{https://linkedin.com/in/yasirsoleh}{linkedin.com/in/yasirsoleh} \textbar{}
+\href{https://github.com/yasirsoleh}{github.com/yasirsoleh} \textbar{}
+\href{https://gitlab.com/yasirsoleh}{gitlab.com/yasirsoleh}}
+\end{center}
+
+% --- Summary ---
+\section{Summary}
+Backend Engineer with experience across cloud-based microservices and embedded systems. Skilled in Go, Rust, PostgreSQL, and event-driven architectures. Actively seeking backend or full stack roles.
+
+% --- Experience ---
+\section{Experience}
+
+\textbf{BigPay Malaysia Sdn. Bhd.}\\
+\textit{Backend Engineer} \hfill November 2025 -- Present
+
+\begin{itemize}
+  \item Maintaining and adding new features to event-driven microservices, performing bugfixes and troubleshooting to ensure reliable service delivery.
+  \item Developing business onboarding for the company's B2B product, streamlining merchant and institution onboarding workflows while ensuring risk compliance.
+\end{itemize}
+
+\textit{Stack:} Rust, Java, Spring Boot, PostgreSQL, Kafka, Kubernetes
+
+\textbf{Elid Sales \& Marketing Sdn. Bhd.}\\
+\textit{R\&D Software Engineer} \hfill September 2022 -- November 2025
+
+\begin{itemize}
+  \item Developed a real-time cloud-based access control system to manage Elid access controllers, enabling centralized control of enterprise access points in real time.
+  \item Designed and developed firmware for cloud serial communicators, connecting legacy serial devices to the cloud and reducing hardware refresh costs.
+  \item Developed and migrated an attendance capture system handling real-time data from hundreds of fingerprint and face terminals, consolidating attendance data streams into a single reliable pipeline.
+\end{itemize}
+
+\textit{Stack:} Go, Rust, PostgreSQL, Microsoft SQL Server, NATS, Embassy, Preact, Docker, Linux
+
+\textbf{EfiChain Solutions Sdn. Bhd.}\\
+\textit{Full Stack Developer Intern} \hfill March 2022 -- August 2022
+
+\begin{itemize}
+  \item Developed an accounting system with a full-featured backend and frontend, delivering a complete accounting product for business users.
+  \item Configured a CI/CD pipeline, automating builds and deployments to reduce release cycle times.
+\end{itemize}
+
+\textit{Stack:} PHP, Laravel, MySQL, TypeScript, React, Redux, CircleCI, Docker, AWS
+
+% --- Education ---
+\section{Education}
+
+\textbf{Universiti Malaysia Pahang}\\
+\textit{Bachelor of Computer Science (Software Engineering)} \hfill September 2018 -- August 2022
+
+\begin{itemize}
+  \item CGPA: 3.57
+  \item Final Year Project: Vehicle tracking system using license plate recognition, with a mobile app and web-based backend for collecting data.
+
+\textit{Stack:} Python, OpenCV, PyTorch, Nvidia Jetson Nano, PHP, Laravel, Dart, Flutter
+\end{itemize}
+
+% --- Certifications ---
+\section{Certifications}
+
+\begin{itemize}
+  \item \textbf{Certified Kubernetes Administrator (CKA)}\\
+        \textit{Cloud Native Computing Foundation} \hfill August 2024
+  \item \textbf{Certified DevOps Foundation}\\
+        \textit{CCSD Council} \hfill July 2024
+\end{itemize}
+
+\end{document}
