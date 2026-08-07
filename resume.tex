@@ -43,7 +43,7 @@
 
 % Summary
 \section{Summary}
-Backend Engineer with 4+ years across cloud-based microservices and embedded systems. Strong in Go, Rust, PostgreSQL, and event-driven architectures, recently working on compliance-critical fintech onboarding at BigPay. Seeking backend or full-stack roles.
+Backend Engineer with 4+ years across cloud-based microservices and embedded systems. Strong in \textbf{Go}, \textbf{Rust}, \textbf{PostgreSQL}, and \textbf{event-driven} architectures, recently working on compliance-critical fintech onboarding at BigPay. Seeking backend or full-stack roles.
 
 % Skills
 \section{Skills}
@@ -53,7 +53,7 @@ Backend Engineer with 4+ years across cloud-based microservices and embedded sys
   \item \textbf{Frameworks \& Libraries:} React, Redux, TanStack, Laravel, Blade, Flutter, Axum, Embassy, templ
   \item \textbf{Data \& Messaging:} PostgreSQL, Microsoft SQL Server, MySQL, NATS, Kafka, MQTT
   \item \textbf{DevOps \& Cloud:} Docker, Podman, Kubernetes, Traefik, CircleCI, Azure, AWS, Linux
-  \item \textbf{Protocols \& Hardware:} WebSockets, SSE, REST APIs, protobuf JWT, UART, RS485, Raspberry Pi Pico, Nvidia Jetson Nano
+  \item \textbf{Protocols \& Hardware:} REST APIs, WebSockets, SSE, protobuf, JWT, UART, RS485, Raspberry Pi Pico, Nvidia Jetson Nano
 \end{itemize}
 
 % Certifications
@@ -73,13 +73,13 @@ Backend Engineer with 4+ years across cloud-based microservices and embedded sys
 \textit{Backend Engineer} \hfill November 2025 -- Present
 
 \begin{itemize}
-  \item Built the Know Your Business (KYB) module end-to-end in the IAM service using Rust, implementing organisation list and detail endpoints with filtering and sorting so compliance teams can review business onboarding submissions.
-  \item Built the Admin Portal frontend with React and TypeScript, shipping the multi-step business onboarding creation form, an onboarding list page with filters, a detail view, a risk rating page, and an audit log page.
-  \item Implemented role-based access control from scratch, designing the backend role and user repositories along with the permission APIs, and rendering menus based on permissions so the portal hides routes the user cannot access.
-  \item Implemented a JWT refresh-token authentication flow across the backend and frontend, with an API client that automatically refreshes tokens and retries failed requests.
+  \item Built the Know Your Business (\textbf{KYB}) module end-to-end in the IAM service using \textbf{Rust}, implementing organisation list and detail endpoints with filtering and sorting so compliance teams can review business onboarding submissions.
+  \item Built the Admin Portal frontend with \textbf{React} and \textbf{TypeScript}, shipping the multi-step business onboarding creation form, an onboarding list page with filters, a detail view, a risk rating page, and an audit log page.
+  \item Implemented \textbf{role-based access control} from scratch, designing the backend role and user repositories along with the permission APIs, and rendering menus based on permissions so the portal hides routes the user cannot access.
+  \item Implemented a \textbf{JWT} authentication flow across the backend and frontend, with an API client that automatically refreshes tokens and retries failed requests.
   \item Enforced compliance-critical validation rules throughout the onboarding flow, which cut down invalid submissions.
-  \item Optimized the remittance service by adding batch actions that make remittance corridor configuration easier.
-  \item Troubleshoot production issues by checking Kubernetes deployments, pods, and logs and querying BigQuery to trace the data behind each incident.
+  \item Optimized the \textbf{remittance service} by adding batch actions that make remittance corridor configuration easier.
+  \item Troubleshoot production issues by checking \textbf{Kubernetes} deployments, pods, and logs and querying \textbf{BigQuery} to trace the data behind each incident.
 \end{itemize}
 
 \textit{Stack:} Rust, Axum, OpenAPI, JWT, React, TypeScript, TanStack, PostgreSQL, Kubernetes, BigQuery, Kafka
@@ -94,38 +94,40 @@ Backend Engineer with 4+ years across cloud-based microservices and embedded sys
 \textbf{BMS: Biometric Management System}
 
 \begin{itemize}
-  \item Built an attendance capture system from scratch for fingerprint and face-recognition terminals, writing the Go services, database migrations, and templ web UI, and shipped it to production.
-  \item Designed a protobuf/NATS message bus for controller-to-server communication and improved ingestion with bulk inserts, pub/sub status subjects, and concurrency locks.
-  \item Built the authentication and authorization features, including email OTP login, password policies, role-based permissions, and admin audit trails, and hardened security against XSS, SQL injection, and CSRF.
+  \item Built an attendance capture system from scratch for fingerprint and face-recognition terminals, writing the \textbf{Go} services, database migrations, and \textbf{templ} web UI, and shipped it to production.
+  \item Designed a \textbf{protobuf/NATS} message bus for controller-to-server communication and improved ingestion with bulk inserts, pub/sub status subjects, and concurrency locks.
+  \item Built the authentication and authorization features, including \textbf{email OTP} login, password policies, role-based permissions, and admin audit trails, and hardened security against XSS, SQL injection, and CSRF.
 \end{itemize}
 
 \textbf{Clover: Cloud Access Control System}
 
 \begin{itemize}
-  \item Wrote the device communication layer in Go, including a TCP broker that speaks the door-controller protocol, an MQTT-to-NATS bridge, and a WebSocket face-reader bridge.
-  \item Designed a NATS JetStream event bus that ingests raw transactions, stores them in PostgreSQL, and streams them live to the dashboard.
-  \item Implemented RBAC with feature and device-level permissions, a FaceReader module for face enrollment, and an HR integration that exports attendance over SFTP.
-  \item Owned the full development lifecycle, from the PostgreSQL schema and hand-written repository layer to the multi-tenant Docker deployment with Traefik.
+  \item Wrote the device communication layer in \textbf{Go}, including a TCP broker that speaks the door-controller protocol, an \textbf{MQTT-to-NATS} bridge, and a \textbf{WebSocket} face-reader bridge.
+  \item Designed a \textbf{NATS JetStream} event bus that ingests raw transactions, stores them in \textbf{PostgreSQL}, and streams them live to the dashboard.
+  \item Implemented \textbf{RBAC} with feature and device-level permissions, a \textbf{FaceReader} module for face enrollment, and an HR integration that exports attendance over \textbf{SFTP}.
+  \item Owned the full development lifecycle, from the \textbf{PostgreSQL} schema and hand-written repository layer to the multi-tenant \textbf{Docker} deployment on \textbf{Azure} Virtual Machines, with \textbf{Traefik} handling routing.
 \end{itemize}
 
 \textbf{EA60/EA76/EL76: Cloud Serial Communicators}
 
 \begin{itemize}
-  \item Built async Rust firmware on Raspberry Pi Pico with Embassy, bridging Ethernet TCP serial, USB serial, COBS framing, and MQTT, with WiFi in access-point and client modes.
-  \item Developed a web-based device setup UI embedded in the firmware, along with a settings module persisted to flash for IP, WiFi, and MAC configuration.
+  \item Built async \textbf{Rust} firmware on Raspberry Pi Pico with \textbf{Embassy} that connects legacy serial devices to the cloud, bridging Ethernet TCP serial, USB serial, COBS framing, and \textbf{MQTT}, with WiFi in both access-point and client modes.
+  \item Engineered the \textbf{RS485}/Clover transaction protocol with query and retransmit state machines, controller detection and conflict checks, and typed serialization into flash-stored configuration.
+  \item Developed a web-based device setup UI embedded in the firmware with \textbf{Preact}, letting installers configure IP, WiFi, and communication settings through a simple interface, with all settings persisted to flash.
+  \item Reduced memory and scheduler overhead with non-blocking \textbf{UART} over DMA channels.
 \end{itemize}
 
-\textit{Stack:} Go, Rust, PostgreSQL, Microsoft SQL Server, NATS, protobuf, Embassy, templ, WebSockets, SSE, Docker/Podman, Azure, Linux
+\textit{Stack:} Go, Rust, PostgreSQL, Microsoft SQL Server, NATS, protobuf, Embassy, templ, Preact, WebSockets, SSE, Docker/Podman, Azure, Linux
 
 \textbf{EfiChain Solutions Sdn. Bhd.}\\
 \textit{Full Stack Developer Intern} \hfill March 2022 -- August 2022
 
 \begin{itemize}
-  \item Built the Debtor/Creditor Aging Report and Debtor Statement modules end-to-end, joining GL posts with debtors, computing aging buckets with running balances and totals, and authoring the printable Blade report templates.
-  \item Developed GL Post by Journal Type reporting with multi-page printing, computing debit and credit totals per journal type and laying out the PDF with tree-structured rows.
-  \item Built the database seeding infrastructure with seeders and model factories for companies, divisions, roles and permissions, GL accounts, journal types, and AR/AP documents with sequence numbers, and resolved the cross-table dependency issues.
-  \item Set up CI/CD with CircleCI, configuring a pipeline that spins up PHP and MySQL containers, caches Composer dependencies, runs migrations, seeding, and PHPUnit tests, and deploys to a staging server.
-  \item Fixed bugs across the AR/AP modules, including document-status sorting and filtering, currency-rate sorting, print layout issues, and multitenancy bugs where division and company mismatches prevented debtors and accounts from resolving.
+  \item Built the Debtor/Creditor Aging Report, Debtor Statement, and GL Post by Journal Type modules end-to-end, computing aging buckets, balances, and totals, and authoring the printable \textbf{Blade} report templates.
+  \item Built the frontend with \textbf{React} and \textbf{Redux}, wiring the reporting pages to the backend APIs.
+  \item Built the database seeding infrastructure with seeders and model factories for companies, GL accounts, journal types, and AR/AP documents.
+  \item Set up \textbf{CI/CD} with \textbf{CircleCI}, running migrations, \textbf{PHPUnit} tests, and staging deployments.
+  \item Fixed bugs across the AR/AP modules, including sorting, filtering, print layout, and multitenancy issues.
 \end{itemize}
 
 \textit{Stack:} PHP, Laravel, Blade, MySQL, TypeScript, React, Redux, CircleCI, Docker, AWS
@@ -139,9 +141,9 @@ Backend Engineer with 4+ years across cloud-based microservices and embedded sys
 \begin{itemize}
   \item CGPA: 3.57
   \item Final Year Project: a vehicle tracking system using license plate recognition, with a mobile app and a web-based backend.
-  \item Extended a YOLOv5 detection pipeline with license-plate recognition using Tesseract OCR, and published results to a traffic-management service over MQTT and a REST API.
-  \item Built the backend with Laravel, including role-based authentication, real-time WebSocket updates, and Docker Compose deployment.
-  \item Built the Flutter mobile app with Google Maps integration for live camera and detection locations, plus search and role-gated navigation.
+  \item Extended a \textbf{YOLOv5} detection pipeline with license-plate recognition using \textbf{Tesseract OCR}, and published results to a traffic-management service over \textbf{MQTT} and a REST API.
+  \item Built the backend with \textbf{Laravel}, including role-based authentication, \textbf{WebSocket} updates, and \textbf{Docker Compose} deployment.
+  \item Built the \textbf{Flutter} mobile app with \textbf{Google Maps} integration for live camera and detection locations, plus search and role-gated navigation.
 \end{itemize}
 
 \textit{Stack:} Python, OpenCV, PyTorch, Nvidia Jetson Nano, MQTT, Node.js, PHP, Laravel, Dart, Flutter
