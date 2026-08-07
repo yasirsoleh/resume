@@ -60,63 +60,11 @@
 </header>
 <section>
   <h2>Summary</h2>
-    <p class="summary">Backend Engineer with experience across cloud-based microservices and embedded systems. Skilled in Go, Rust, PostgreSQL, and event-driven architectures. Seeking backend or full stack roles.</p>
+    <p class="summary">Backend Engineer with 4+ years across cloud-based microservices and embedded systems. Strong in Go, Rust, PostgreSQL, and event-driven architectures, recently working on compliance-critical fintech onboarding at BigPay. Seeking backend or full-stack roles.</p>
 </section>
 <section>
-  <h2>Experience</h2>
-  <div class="entry">
-    <div class="entry-header">
-      <span class="entry-org">BigPay Malaysia Sdn. Bhd.</span>
-    </div>
-    <div class="entry-role-date">
-      <span>Backend Engineer</span>
-      <span>November 2025 – Present</span>
-    </div>
-    <ul> <li>Built the know your business (KYB) module end-to-end in the IAM service (Rust) — implemented organisation list and detail endpoints with filtering and sorting, enabling compliance teams to review business onboarding submissions.</li> <li>Built the Admin Portal frontend (React + TypeScript) — shipped the multi-step business onboarding creation form, onboarding list page with filters, onboarding detail view, risk rating page, and audit log page.</li> <li>Implemented RBAC from scratch — designed backend role/user repositories and permission APIs, with permission-based menu rendering so the portal hides routes by user permission.</li> <li>Implemented a JWT refresh-token auth flow across backend and frontend (API client with automatic refresh and retry).</li> <li>Enforced compliance-critical validation rules across the onboarding flow, reducing invalid submissions.</li> <li>Optimized the remittance service — added batch actions for easier remittance corridor configuration.</li> </ul>
-    <div class="stack">Stack: Rust, Axum, OpenAPI, JWT, React, TypeScript, TanStack, PostgreSQL</div>
-  </div>
-  <div class="entry">
-    <div class="entry-header">
-      <span class="entry-org">Elid Sales &amp; Marketing Sdn. Bhd.</span>
-    </div>
-    <div class="entry-role-date">
-      <span>R&amp;D Software Engineer</span>
-      <span>September 2022 – November 2025</span>
-    </div>
-    <ul> <li>Delivered three product lines: an attendance capture platform for biometric devices (BMS), a real-time cloud access control system (Clover), and embedded firmware for cloud serial communicators (EA60/EL76/EA76).</li> </ul>
-    <p>BMS — Biometric Management System</p>
-    <ul> <li>Built an attendance capture system end-to-end from zero — authored the initial SQL migrations, Go services, and templ web UI for a fingerprint and facial-recognition time-attendance platform; shipped to production at a customer site.</li> <li>Designed a protobuf/NATS message bus for controller-to-server communication, replacing ad-hoc socket handling with a typed command broker, then optimized ingestion with bulk inserts, pub/sub status subjects, and concurrency locks (fixed lock contention on reconnect).</li> <li>Built the authentication and authorization feature set: login, email OTP, forgot/reset password, password policy with expiry notifications and session limits, role-permission with per-controller/device authorization, and audit trail for every admin action.</li> <li>Hardened security: XSS/SQLi input sanitization, CSRF origin/referer checks, secure cookies, directory-traversal fixes, and certificate handling.</li> <li>Built server-side frontend components for paginated, sortable, filterable tables, live transaction tables via SSE, modals, multi-select device templates, and a live controller status page with per-second transaction throughput.</li> <li>Observability and performance: transaction-per-second monitoring, database index tuning, memory-leak fixes (using pprof), and windowed count queries for pagination.</li> </ul>
-    <p>Clover — Cloud Access Control System</p>
-    <ul> <li>Built the device communication layer — wrote the TCP controller broker in Go that speaks the door-controller protocol plus an MQTT-to-NATS bridge for door access controllers and a WebSocket face-reader bridge for face-recognition devices.</li> <li>Designed a NATS JetStream event bus with per-organization namespaces: raw-transaction ingestion, bulk inserts into PostgreSQL, and live SSE streaming to the dashboard; implemented a request-response command pattern with an ack-retransmit protocol for unreliable devices, plus a bus lock to prevent concurrent writes.</li> <li>Built the RBAC module with feature-level permissions and resource-level scoping (specific device/communicator IDs), enforced as a mandatory first check in every HTTP handler and surfaced as editable role/permission pages in the UI.</li> <li>Created the FaceReader module in the access service: device registration and editing, face enrollment with visitor support, face deletion on access-card deletion, and a UTC-safe device time-sync that runs every 24h.</li> <li>Implemented the HR integration module — exported over SFTP and providing payroll-grade data.</li> <li>Built the admin web dashboard with templ and Datastar (SSE): reusable table components with sorting, filtering, and pagination, live transaction, area trace, audit trails, Excel import and export, door status indicators, and permission-aware across all pages.</li> <li>Owned the full SDLC — PostgreSQL schema with goose migrations, hand-written repository layer (raw SQL, no ORM), structured logging with slog, protobuf contracts for all inter-service messages, and a strict Handler <span class="math inline">→</span> Service <span class="math inline">→</span> Repository three-layer architecture.</li> <li>Deployed multi-tenant infrastructure: Docker/Podman with Traefik reverse proxy on ACME DNS-Challenge (Cloudflare), private container registry, and per-tenant compose files with isolated NATS streams and Postgres databases.</li> </ul>
-    <p>EA60/EA76/EL76 — Cloud Serial Communicators</p>
-    <ul> <li>Built async Rust firmware on Raspberry Pi Pico with the Embassy framework — multi-protocol bridging: Ethernet TCP serial, USB serial, COBS framing, and MQTT publish/subscribe, and WiFi access-point/client modes.</li> <li>Engineered the RS485/Clover transaction protocol: connection handling with state machines, controller detection and conflict checks, and typed serialization/deserialization with postcard-to-flash config storage.</li> <li>Built a settings/configuration system persisted to flash with serde (heapless), including IP configuration, WiFi credentials, and MAC address settings.</li> <li>Developed a web-based device setup UI (React/TypeScript with Vite and Bun) embedded in the firmware — static assets compressed using gzip to mitigate storage constraints.</li> <li>Reduced embedded memory and scheduler overhead by utilizing non-blocking UART via DMA channels.</li> </ul>
-    <div class="stack">Stack: Go, Rust, PostgreSQL, Microsoft SQL Server, NATS, protobuf, Embassy, templ, WebSockets, SSE, Docker/Podman, Linux</div>
-  </div>
-  <div class="entry">
-    <div class="entry-header">
-      <span class="entry-org">EfiChain Solutions Sdn. Bhd.</span>
-    </div>
-    <div class="entry-role-date">
-      <span>Full Stack Developer Intern</span>
-      <span>March 2022 – August 2022</span>
-    </div>
-    <ul> <li>Built the Debtor/Creditor Aging Report and Debtor Statement modules end-to-end in GlPostService — joined GL posts with debtors, computed aging buckets (0–6+ months), running balances and totals, and authored the printable Blade report templates.</li> <li>Developed GL Post by Journal Type reporting with multi-page printing: debit/credit totals per journal type and multi-page PDF layout with tree-structured rows.</li> <li>Built the database seeding infrastructure — created 60+ seeders and model factories (companies, divisions, roles/permissions, GL accounts, journal types, AR/AP documents with sequence numbers), resolving cross-table dependency issues.</li> <li>Set up CI/CD with CircleCI — configured a pipeline spinning up PHP + MariaDB containers, caching Composer dependencies, running migrations, seeding, and PHPUnit tests, then deploying to a staging server via SSH/SCP.</li> <li>Fixed bugs across AR/AP modules — doc-status sorting/filtering, currency-rate sorting, print layout issues, and multitenancy bugs (division/company mismatches preventing debtors and accounts from resolving).</li> </ul>
-    <div class="stack">Stack: PHP, Laravel, Blade, MySQL, TypeScript, React, Redux, CircleCI, Docker, AWS</div>
-  </div>
-</section>
-<section>
-  <h2>Education</h2>
-  <div class="entry">
-    <div class="entry-header">
-      <span class="entry-org">Universiti Malaysia Pahang</span>
-    </div>
-    <div class="entry-role-date">
-      <span>Bachelor of Computer Science (Software Engineering)</span>
-      <span>September 2018 – August 2022</span>
-    </div>
-    <ul> <li>CGPA: 3.57</li> <li>Final Year Project: vehicle tracking system using license plate recognition — mobile app and web-based backend for collecting data.</li> <li>Extended a YOLOv5 real-time detection pipeline with automatic license-plate recognition: cropped plate regions from detections, Tesseract OCR with plate-number normalization, and results published to a downstream traffic-management service over MQTT and a token-authenticated REST API.</li> <li>Built a token-based REST API with role-based access — Laravel Sanctum with three ability tiers (user, admin, camera), covering login/logout, token revocation, password change, and admin user management.</li> <li>Engineered a real-time detection pipeline and WebSocket broadcasts to the frontend via a self-hosted Soketi (Pusher-compatible) server.</li> <li>Wrote an MQTT-to-HTTP bridge service in Node.js, subscribing to detections on Mosquitto and forwarding payloads to the Laravel API.</li> <li>Containerized the full stack with Docker Compose (Laravel Sail, Mosquitto, Soketi, and the bridge service).</li> <li>Built the Flutter mobile app: Google Maps integration for live camera/detection locations, real-time Pusher updates, infinite scrolling for detections, role-gated navigation, camera CRUD, and search across cameras, detections, and routes.</li> </ul>
-    <div class="stack">Stack: Python, OpenCV, PyTorch, Nvidia Jetson Nano, MQTT, Websocket, Node.js, JavaScript, PHP, Laravel, Dart, Flutter</div>
-  </div>
+  <h2>Skills</h2>
+    <ul> <li><strong>Languages:</strong> Go, Rust, SQL, TypeScript, JavaScript, Python, PHP, Dart</li> <li><strong>Frameworks &amp; Libraries:</strong> React, Redux, TanStack, Laravel, Blade, Flutter, Axum, Embassy, templ</li> <li><strong>Data &amp; Messaging:</strong> PostgreSQL, Microsoft SQL Server, MySQL, NATS, Kafka, MQTT</li> <li><strong>DevOps &amp; Cloud:</strong> Docker, Podman, Kubernetes, Traefik, CircleCI, Azure, AWS, Linux</li> <li><strong>Protocols &amp; Hardware:</strong> WebSockets, SSE, REST APIs, protobuf JWT, UART, RS485, Raspberry Pi Pico, Nvidia Jetson Nano</li> </ul>
 </section>
 <section>
   <h2>Certifications</h2>
@@ -137,6 +85,62 @@
       <span>CCSD Council</span>
       <span>July 2024</span>
     </div>
+  </div>
+</section>
+<section>
+  <h2>Experience</h2>
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-org">BigPay Malaysia Sdn. Bhd.</span>
+    </div>
+    <div class="entry-role-date">
+      <span>Backend Engineer</span>
+      <span>November 2025 – Present</span>
+    </div>
+    <ul> <li>Built the Know Your Business (KYB) module end-to-end in the IAM service using Rust, implementing organisation list and detail endpoints with filtering and sorting so compliance teams can review business onboarding submissions.</li> <li>Built the Admin Portal frontend with React and TypeScript, shipping the multi-step business onboarding creation form, an onboarding list page with filters, a detail view, a risk rating page, and an audit log page.</li> <li>Implemented role-based access control from scratch, designing the backend role and user repositories along with the permission APIs, and rendering menus based on permissions so the portal hides routes the user cannot access.</li> <li>Implemented a JWT refresh-token authentication flow across the backend and frontend, with an API client that automatically refreshes tokens and retries failed requests.</li> <li>Enforced compliance-critical validation rules throughout the onboarding flow, which cut down invalid submissions.</li> <li>Optimized the remittance service by adding batch actions that make remittance corridor configuration easier.</li> <li>Troubleshoot production issues by checking Kubernetes deployments, pods, and logs and querying BigQuery to trace the data behind each incident.</li> </ul>
+    <div class="stack">Stack: Rust, Axum, OpenAPI, JWT, React, TypeScript, TanStack, PostgreSQL, Kubernetes, BigQuery, Kafka</div>
+  </div>
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-org">Elid Sales &amp; Marketing Sdn. Bhd.</span>
+    </div>
+    <div class="entry-role-date">
+      <span>R&amp;D Software Engineer</span>
+      <span>September 2022 – November 2025</span>
+    </div>
+    <ul> <li>Delivered three product lines: an attendance capture platform (BMS), a cloud access control system (Clover), and embedded firmware for cloud serial communicators (EA60/EA76/EL76).</li> </ul>
+    <div class="subproject">BMS: Biometric Management System</div>
+    <ul> <li>Built an attendance capture system from scratch for fingerprint and face-recognition terminals, writing the Go services, database migrations, and templ web UI, and shipped it to production.</li> <li>Designed a protobuf/NATS message bus for controller-to-server communication and improved ingestion with bulk inserts, pub/sub status subjects, and concurrency locks.</li> <li>Built the authentication and authorization features, including email OTP login, password policies, role-based permissions, and admin audit trails, and hardened security against XSS, SQL injection, and CSRF.</li> </ul>
+    <div class="subproject">Clover: Cloud Access Control System</div>
+    <ul> <li>Wrote the device communication layer in Go, including a TCP broker that speaks the door-controller protocol, an MQTT-to-NATS bridge, and a WebSocket face-reader bridge.</li> <li>Designed a NATS JetStream event bus that ingests raw transactions, stores them in PostgreSQL, and streams them live to the dashboard.</li> <li>Implemented RBAC with feature and device-level permissions, a FaceReader module for face enrollment, and an HR integration that exports attendance over SFTP.</li> <li>Owned the full development lifecycle, from the PostgreSQL schema and hand-written repository layer to the multi-tenant Docker deployment with Traefik.</li> </ul>
+    <div class="subproject">EA60/EA76/EL76: Cloud Serial Communicators</div>
+    <ul> <li>Built async Rust firmware on Raspberry Pi Pico with Embassy, bridging Ethernet TCP serial, USB serial, COBS framing, and MQTT, with WiFi in access-point and client modes.</li> <li>Developed a web-based device setup UI embedded in the firmware, along with a settings module persisted to flash for IP, WiFi, and MAC configuration.</li> </ul>
+    <div class="stack">Stack: Go, Rust, PostgreSQL, Microsoft SQL Server, NATS, protobuf, Embassy, templ, WebSockets, SSE, Docker/Podman, Azure, Linux</div>
+  </div>
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-org">EfiChain Solutions Sdn. Bhd.</span>
+    </div>
+    <div class="entry-role-date">
+      <span>Full Stack Developer Intern</span>
+      <span>March 2022 – August 2022</span>
+    </div>
+    <ul> <li>Built the Debtor/Creditor Aging Report and Debtor Statement modules end-to-end, joining GL posts with debtors, computing aging buckets with running balances and totals, and authoring the printable Blade report templates.</li> <li>Developed GL Post by Journal Type reporting with multi-page printing, computing debit and credit totals per journal type and laying out the PDF with tree-structured rows.</li> <li>Built the database seeding infrastructure with seeders and model factories for companies, divisions, roles and permissions, GL accounts, journal types, and AR/AP documents with sequence numbers, and resolved the cross-table dependency issues.</li> <li>Set up CI/CD with CircleCI, configuring a pipeline that spins up PHP and MySQL containers, caches Composer dependencies, runs migrations, seeding, and PHPUnit tests, and deploys to a staging server.</li> <li>Fixed bugs across the AR/AP modules, including document-status sorting and filtering, currency-rate sorting, print layout issues, and multitenancy bugs where division and company mismatches prevented debtors and accounts from resolving.</li> </ul>
+    <div class="stack">Stack: PHP, Laravel, Blade, MySQL, TypeScript, React, Redux, CircleCI, Docker, AWS</div>
+  </div>
+</section>
+<section>
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-org">Universiti Malaysia Pahang</span>
+    </div>
+    <div class="entry-role-date">
+      <span>Bachelor of Computer Science (Software Engineering)</span>
+      <span>September 2018 – August 2022</span>
+    </div>
+    <ul> <li>CGPA: 3.57</li> <li>Final Year Project: a vehicle tracking system using license plate recognition, with a mobile app and a web-based backend.</li> <li>Extended a YOLOv5 detection pipeline with license-plate recognition using Tesseract OCR, and published results to a traffic-management service over MQTT and a REST API.</li> <li>Built the backend with Laravel, including role-based authentication, real-time WebSocket updates, and Docker Compose deployment.</li> <li>Built the Flutter mobile app with Google Maps integration for live camera and detection locations, plus search and role-gated navigation.</li> </ul>
+    <div class="stack">Stack: Python, OpenCV, PyTorch, Nvidia Jetson Nano, MQTT, Node.js, PHP, Laravel, Dart, Flutter</div>
   </div>
 </section>
 
